@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddItemController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="302.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/add_item.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="75.0" arcWidth="75.0" fill="WHITE" height="362.0" layoutX="16.0" layoutY="19.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="270.0" />
+      <Label layoutX="67.0" layoutY="154.0" text="Add Items">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="195.0" text="Form">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemCode" layoutX="332.0" layoutY="59.0" prefHeight="26.0" prefWidth="293.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtItemName" layoutX="332.0" layoutY="103.0" prefHeight="26.0" prefWidth="294.0" promptText="Item Name" />
+      <JFXTextField fx:id="txtUnitPrice" layoutX="332.0" layoutY="254.0" prefHeight="26.0" prefWidth="294.0" promptText="Unit Price" />
+      <JFXTextArea fx:id="txtItemDescription" layoutX="331.0" layoutY="143.0" prefHeight="88.0" prefWidth="294.0" promptText="Item Description" />
+      <JFXTextField fx:id="txtQtyOnHand" layoutX="332.0" layoutY="299.0" prefHeight="26.0" prefWidth="294.0" promptText="Qty On Hand" />
+      <JFXButton layoutX="454.0" layoutY="340.0" onAction="#btnAddItemOnClick" opacity="0.65" style="-fx-background-color: blue;" text="Add Item" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="543.0" layoutY="340.0" onAction="#btnClearOnClick" opacity="0.65" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: red;" text="Clear" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
